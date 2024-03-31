@@ -1,20 +1,18 @@
 import axios from "axios";
 
-// Setup Axios defaults if necessary, such as headers common across all requests
+
 axios.defaults.headers.common["Key"] = "Meason";
 
-// Example converting registerUser to use Axios and return the response data
 export const registerUser = async (userData) => {
 	try {
 		const response = await axios.post("https://no23.lavina.tech/signup", userData);
-		return response.data; // Return the response data
+		return response.data;
 	} catch (error) {
 		console.error(error);
-		throw error; // Rethrow the error for further handling
+		throw error;
 	}
 };
 
-// getUserInfo using Axios and returning the response data
 export const getUserInfo = async () => {
 	try {
 		const headers = {
@@ -29,7 +27,7 @@ export const getUserInfo = async () => {
 	}
 };
 
-// CreateBooks using Axios and returning the response data
+
 export const createBooks = async (data) => {
 	try {
 		const headers = {
@@ -45,7 +43,6 @@ export const createBooks = async (data) => {
 	}
 };
 
-// getAllBooks using Axios and returning the response data
 export const getAllBooks = async () => {
 	try {
 		const headers = {
@@ -60,7 +57,7 @@ export const getAllBooks = async () => {
 	}
 };
 
-// deleteBook using Axios and returning the response data
+
 export const deleteBook = async (id) => {
 	try {
 		const headers = {
@@ -75,7 +72,7 @@ export const deleteBook = async (id) => {
 	}
 };
 
-// updateBook using Axios and returning the response data
+
 export const updateBook = async (id, status) => {
 	try {
 		const headers = {
@@ -91,7 +88,6 @@ export const updateBook = async (id, status) => {
 	}
 };
 
-// search using Axios and returning the response data
 export const search = async (title) => {
 	try {
 		const headers = {
