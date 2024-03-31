@@ -13,8 +13,9 @@ const Register1: React.FC = () => {
 			user.data = true;
 
 			localStorage.setItem("userData", JSON.stringify(data));
-
-			// <Navigate to="" />;
+			setTimeout(() => {
+				window.location.reload();
+			}, 3000);
 		} catch (err) {
 			console.log(err);
 		}
