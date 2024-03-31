@@ -14,7 +14,7 @@ const Register1: React.FC = () => {
 
 			localStorage.setItem("userData", JSON.stringify(data));
 
-			<Navigate to="" />;
+			// <Navigate to="" />;
 		} catch (err) {
 			console.log(err);
 		}
